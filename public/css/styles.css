@@ -25,3 +25,7 @@ height: 8rem;
 .height_banner{
   height: 20rem;
 }
+
+.card_img{
+  max-width: 100%;
+}

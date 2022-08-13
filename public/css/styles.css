@@ -1,0 +1,27 @@
+body{
+  background-color: #FEC260;
+}
+.banner_img{
+  width: 100%;
+  height:21rem;
+}
+.nav{
+
+}
+.ageText{
+      padding-top: 4rem;
+}
+.row>*{
+  padding:  0;
+}
+
+.banner{
+  position: relative;
+bottom: 11rem;
+background-color: #E6B325;
+height: 8rem;
+}
+
+.height_banner{
+  height: 20rem;
+}

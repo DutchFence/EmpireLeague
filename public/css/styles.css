@@ -1,31 +1,121 @@
 body{
-  background-color: #FEC260;
+
+  background-color: #000E57;
+opacity: 0.9;
+background: linear-gradient(135deg, #0e103255 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(225deg, #0e1032 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(315deg, #0e103255 25%, transparent 25%) 0px 0/ 10px 10px, linear-gradient(to right, #0e1032 5%, #000E57 100%), linear-gradient(45deg, #0e1032 25%, #000E57 25%) 0px 0/ 10px 10px;
+  text-align: center;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-weight: bold;
+
+  color: #F0D624;
 }
+
 .banner_img{
   width: 100%;
   height:21rem;
+  border-bottom: 4mm ridge;
+  border-top: 4mm ridge;
+  border-color: #F0D624;
 }
-.nav{
 
+/* 000E57   nice navy  */
+/* A32F08  nice beauitufl orange */
+.nav-bg-color{
+  background-color: #000E57;
+  opacity: 0.9;
+  background: linear-gradient(135deg, #0e103255 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(225deg, #0e1032 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(315deg, #0e103255 25%, transparent 25%) 0px 0/ 10px 10px, linear-gradient(to right, #0e1032 5%, #000E57 100%), linear-gradient(45deg, #0e1032 25%, #000E57 25%) 0px 0/ 10px 10px;
+
+}
+.nav-link{
+  color: #F0D624  ;
+}
+<!-- HTML !-->
+<button class="button-73" role="button">Button 73</button>
+
+/* CSS */
+.button-73 {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-73:hover {
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.button-73:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+  .button-73 {
+    font-size: 1.5rem;
+    padding: .75rem 2rem;
+  }
 }
 .ageText{
       padding-top: 4rem;
+      padding-bottom: 2rem;
+      text-decoration: overline;
 }
-.row>*{
+/* .row>*{
   padding:  0;
-}
-
+} */
 .banner{
   position: relative;
 bottom: 11rem;
-background-color: #E6B325;
 height: 8rem;
+background-color: #9b3816;
+opacity: 1;
+background-image: radial-gradient(#000000 0.65px, #9b3816 0.65px);
+background-size: 13px 13px;
+
+}
+.card{
+  background-color: #9b3816;
+opacity: 1;
+background-image: linear-gradient(to right, #9b3816, #892707 );
 }
 
+.card-body{
+  color: white;
+}
 .height_banner{
   height: 20rem;
+  padding: 0;
+
 }
 
+.card_marg{
+  margin: 0 auto;
+    float: none;
+}
 .card_img{
   max-width: 100%;
+}
+
+a{
+  color: white;
 }

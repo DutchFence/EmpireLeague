@@ -1,15 +1,22 @@
-body{
 
+body{
   background-color: #000E57;
 opacity: 0.9;
 background: linear-gradient(135deg, #0e103255 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(225deg, #0e1032 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(315deg, #0e103255 25%, transparent 25%) 0px 0/ 10px 10px, linear-gradient(to right, #0e1032 5%, #000E57 100%), linear-gradient(45deg, #0e1032 25%, #000E57 25%) 0px 0/ 10px 10px;
   text-align: center;
   font-family: 'Quattrocento Sans', sans-serif;
   font-weight: bold;
-
   color: #F0D624;
 }
-
+h1{
+  text-shadow: 3px -1px  2px #473f05;
+}
+section.body_html{
+  min-height: 100vh;
+}
+.space_card_cars{
+  padding-bottom: 4rem;
+}
 .banner_img{
   width: 100%;
   height:21rem;
@@ -24,58 +31,71 @@ background: linear-gradient(135deg, #0e103255 25%, transparent 25%) -5px 0/ 10px
   background-color: #000E57;
   opacity: 0.9;
   background: linear-gradient(135deg, #0e103255 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(225deg, #0e1032 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(315deg, #0e103255 25%, transparent 25%) 0px 0/ 10px 10px, linear-gradient(to right, #0e1032 5%, #000E57 100%), linear-gradient(45deg, #0e1032 25%, #000E57 25%) 0px 0/ 10px 10px;
-
 }
+
 .nav-link{
   color: #F0D624  ;
 }
 
-/* CSS */
+.carousel-item {
+height: 300px;
+overflow: hidden;
+width: 100%;
+}
+
+.carousel-item img {
+width: 100%;
+}
+
 .ageText{
-
-
       padding-bottom: 3.5rem;
       text-decoration: overline;
 }
+
 .overline{
   text-decoration: overline;
 }
-/* .row>*{
-  padding:  0;
-} */
+
 .banner{
-  position: relative;
 bottom: 11rem;
 height: 8rem;
 background-color: #9b3816;
 opacity: 1;
-background-image: radial-gradient(#000000 0.65px, #9b3816 0.65px);
-background-size: 13px 13px;
-
-}
-.example_img{
+background-image: linear-gradient(to right, #9b3816, #c9481d );
   
+}
+
+.example_img{
   height: 30rem;
 }
+
 .card{
   background-color: #9b3816;
 opacity: 1;
-background-image: linear-gradient(to right, #9b3816, #892707 );
+background-image: linear-gradient(to right, #9b3816, #c9481d );
+border: 1mm ridge;
+border-color: #F0D624;
 }
 
+.p_padding_ranked_info{
+  padding: 5% 25%;
+  line-height: 2rem;
+  font-family: 'Aboreto', cursive;
+  text-shadow: 1px 0 24px #8f7d0a;
+}
 .card-body{
   color: white;
 }
 .height_banner{
   height: 20rem;
   padding: 0;
-
 }
 
 .card_marg{
   margin: 0 auto;
     float: none;
 }
+
 .card_img{
   max-width: 100%;
 }

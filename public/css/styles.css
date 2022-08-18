@@ -1,12 +1,29 @@
+html{
+  overflow-x: hidden;
 
+}
+footer,a{
+  text-decoration: none;
+}
+.flag_logo{
+  position: absolute;
+right: 45%;
+left: 48%;
+top: 0;
+width: 6rem;
+border: 3px solid black;
+/* border-radius: 100%; */
+opacity: 1
+}
 body{
+
   background-color: #000E57;
 opacity: 0.9;
 background: linear-gradient(135deg, #0e103255 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(225deg, #0e1032 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(315deg, #0e103255 25%, transparent 25%) 0px 0/ 10px 10px, linear-gradient(to right, #0e1032 5%, #000E57 100%), linear-gradient(45deg, #0e1032 25%, #000E57 25%) 0px 0/ 10px 10px;
   text-align: center;
   font-family: 'Quattrocento Sans', sans-serif;
   font-weight: bold;
-  color: #F0D624;
+  color: #d7be69;
 }
 h1{
   text-shadow: 3px -1px  2px #473f05;
@@ -17,12 +34,56 @@ section.body_html{
 .space_card_cars{
   padding-bottom: 4rem;
 }
+.button_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.signup_button{
+  width: 10rem;
+  height: 3rem;
+  border-radius: 4px;
+  transition: ease-out 0.3s;
+  font-size: 1.5rem;
+  outline: none;
+  background: linear-gradient(to right,#5c8a8a, #e6b3e6);
+  border: 3px solid #334d4d;
+  position: relative;
+  z-index: 1;
+}
+.signup_button:hover{
+  color: white;
+  cursor: pointer;
+}
+.signup_button:before{
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background: #8f7d0a;
+}
+
+.signup_button:hover:before{
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
 .banner_img{
   width: 100%;
   height:21rem;
   border-bottom: 4mm ridge;
   border-top: 4mm ridge;
-  border-color: #F0D624;
+  border-color: #d7be69;
 }
 
 /* 000E57   nice navy  */
@@ -34,7 +95,7 @@ section.body_html{
 }
 
 .nav-link{
-  color: #F0D624  ;
+  color: #d7be69  ;
 }
 
 .carousel-item {
@@ -43,6 +104,10 @@ overflow: hidden;
 width: 100%;
 }
 
+}
+.carousel{
+  padding-bottom: 4rem;
+}
 .carousel-item img {
 width: 100%;
 }
@@ -62,7 +127,7 @@ height: 8rem;
 background-color: #9b3816;
 opacity: 1;
 background-image: linear-gradient(to right, #9b3816, #c9481d );
-  
+
 }
 
 .example_img{
@@ -74,7 +139,7 @@ background-image: linear-gradient(to right, #9b3816, #c9481d );
 opacity: 1;
 background-image: linear-gradient(to right, #9b3816, #c9481d );
 border: 1mm ridge;
-border-color: #F0D624;
+border-color: #d7be69;
 }
 
 .p_padding_ranked_info{
@@ -99,7 +164,10 @@ border-color: #F0D624;
 .card_img{
   max-width: 100%;
 }
+.card-text{
+  color: black;
+}
 
 a{
-  color: white;
+  color: gold;
 }

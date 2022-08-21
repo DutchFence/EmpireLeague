@@ -43,6 +43,10 @@ a {
   background: linear-gradient(135deg, #0e103255 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(225deg, #0e1032 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(315deg, #0e103255 25%, transparent 25%) 0 0/ 10px 10px, linear-gradient(to right, #0e1032 5%, #000E57 100%), linear-gradient(45deg, #0e1032 25%, #000E57 25%) 0 0/ 10px 10px;
 
 }
+/* Spacing */
+.spacing_for_nav{
+  margin-top: 12rem;
+}
 /* Animated button */
 .button_container {
   display: flex;

@@ -1,5 +1,9 @@
 //Requires
 require("dotenv").config();
+const https = require('https');
+const fs = require('fs');
+
+
 const express = require("express");
 
 process.setMaxListeners(0);
@@ -10,9 +14,13 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
-
+const FacebookStrategy = require('passport-facebook');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require("mongoose-findorcreate");
+const options = {
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem')
+};
 // Inits
 const app = express();
 app.use(express.static(__dirname + '/public'));
@@ -29,11 +37,11 @@ app.use(passport.session());
 
 mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser:true});
 
-
 const userSchema = new mongoose.Schema({
-  email: String,
-  password: String,
-  googleId: String,
+  email: {type:String,required:true,unique:true},
+  email_verified:{type:Boolean,default:false},
+  provider: String,
+  providerId: String,
   secret: String
 });
 
@@ -52,6 +60,7 @@ passport.deserializeUser(function(id, done){
     done(err, user);
   });
 });
+
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
@@ -60,7 +69,23 @@ passport.use(new GoogleStrategy({
   },
   function(accessToken, refreshToken, profile, cb) {
     console.log(profile);
-    User.findOrCreate({ googleId: profile.id }, function (err, user) {
+    User.findOrCreate({email: profile.emails[0].value, provider:"Google", providerId: profile.id }, function (err, user) {
+      return cb(err, user);
+    });
+  }
+));
+
+passport.use(new FacebookStrategy({
+    clientID: process.env.FACEBOOK_APP_ID,
+    clientSecret: process.env.FACEBOOK_APP_SECRET,
+    callbackURL: "http://localhost:3000/auth/facebook/dashboard",
+     enableProof: true,
+    profileFields: ['id', 'emails']
+  },
+  function(accessToken, refreshToken, profile, cb) {
+    console.log(profile);
+    User.findOrCreate({ email: profile.emails[0].value, provider: "Facebook", providerId: profile.id }, function (err, user) {
+      console.log(profile.id);
       return cb(err, user);
     });
   }
@@ -74,10 +99,23 @@ app.get("/", function(req, res){
 });
 
 app.get("/login", function(req,res){
+
   res.render("login");
 });
+
+app.get('/auth/facebook',
+  passport.authenticate('facebook',{ scope : ['email'] }));
+
+  app.get('/auth/facebook/dashboard',
+    passport.authenticate('facebook', { failureRedirect: '/login' }),
+    function(req, res) {
+
+      // Successful authentication, redirect home.
+      res.redirect('/dashboard');
+    });
+
 app.get('/auth/google',
-  passport.authenticate('google', { scope: ['profile'] }));
+  passport.authenticate('google', { scope: ['profile','email'] }));
 
   app.get('/auth/google/dashboard',
     passport.authenticate('google', { failureRedirect: '/login' }),
@@ -99,3 +137,6 @@ app.get("/dashboard", function(req,res){
 app.listen(process.env.PORT, function(){
   console.log("server started on port: ", process.env.PORT);
 });
+// https.createServer(options, app).listen(8080, () => {
+//   console.log(`HTTPS server started on port 8080`);
+// });

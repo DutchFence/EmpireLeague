@@ -62,7 +62,10 @@ a {
   color: #d7be69;
 
 }
-
+/* Forms */
+.form-label{
+  width:50%;
+}
 /* Animated button */
 .btn-social{
       padding-right: 2rem;

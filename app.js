@@ -124,6 +124,9 @@ app.get('/auth/google',
       res.redirect('/dashboard');
     });
 
+    app.get("/register", function(req,res){
+      res.render("register");
+    });
 app.get("/dashboard", function(req,res){
   if(req.isAuthenticated()){
     res.render("dashboard");

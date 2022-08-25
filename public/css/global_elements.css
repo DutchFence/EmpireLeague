@@ -5,6 +5,7 @@ html {
 
 footer, a {
   text-decoration: none;
+  text-shadow: none;
 }
 
 body {
@@ -64,7 +65,12 @@ a {
 }
 /* Forms */
 .form-label{
-  width:50%;
+  width:40%;
+}
+
+input[type]:focus{
+  border: 1mm ridge;
+    border-color: #d7be69;
 }
 /* Animated button */
 .btn-social{

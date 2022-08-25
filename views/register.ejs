@@ -6,21 +6,20 @@
 <div class="row">
 
   <div class="col-md-8">
-    <h1>Create a new account to join the league!</h1>
+    <h1 class="mb-3">Create a new account to join the league!</h1>
     <form class="" action="/register" method="post">
-      <div class="mb-3">
+      <div >
         <label for="exampleInputEmail1" class="form-label">Email address
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></label>
-        <div id="emailHelp" class="form-text">You will have to verify your password with an email</div>
+        <input type="email" class="form-control" name="email" aria-describedby="emailHelp"></label>
+      </div>
+      <div>
+        <label for="exampleInputEmail1" class="form-label">Username
+        <input type="text" class="form-control" name="username" aria-describedby="emailHelp"></label>
+
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Password
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></label>
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Verify password
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></label>
+        <input type="password" class="form-control" name="password" aria-describedby="emailHelp"></label>
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
       </div>
 

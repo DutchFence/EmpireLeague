@@ -40,7 +40,9 @@ mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser:true});
 const userSchema = new mongoose.Schema({
   email: {type:String,required:true,unique:true},
   email_verified:{type:Boolean,default:false},
-  provider: String,
+  username:{type:String, unique:true},
+  password: {type:String},
+  provider: {type:String, required:true, default:"Empire League"},
   providerId: String,
   secret: String
 });
@@ -98,9 +100,50 @@ app.get("/", function(req, res){
   res.render("home");
 });
 
-app.get("/login", function(req,res){
+app.post("/login", function(req,res){
+const user = new User({
+  username: req.body.username,
+  password: req.body.password
+});
+req.login(user, function(err){
+  if(err){
+    console.log(err);
+  }else{
+    passport.authenticate("local")(req,res, function(){
+      res.redirect("/dashboard");
+    });
+  };
+});
+});
 
+app.post('/logout', function(req, res){
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    res.redirect('/');
+  });
+});
+
+app.get("/login", function(req,res){
+if(req.isAuthenticated()){
+  res.render("dashboard", {profile:req});
+}else{
   res.render("login");
+}
+});
+app.get('/verifyEmailRegistration', function(req, res){
+  res.render("verifyEmailRegistration");
+});
+app.post("/register", function(req, res){
+  User.register({email: req.body.email, username: req.body.username}, req.body.password, function(err, user){
+    if(err){
+      console.log(err);
+      res.redirect("/register");
+    }else{
+      passport.authenticate("local")(req,res,function(){
+        res.redirect("/verifyEmailRegistration");
+      });
+    }
+  });
 });
 
 app.get('/auth/facebook',
@@ -128,8 +171,12 @@ app.get('/auth/google',
       res.render("register");
     });
 app.get("/dashboard", function(req,res){
+  console.log(req);
   if(req.isAuthenticated()){
-    res.render("dashboard");
+
+
+    res.render("dashboard",{profile:req});
+
 
 }
   else{

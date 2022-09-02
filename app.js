@@ -141,8 +141,10 @@ app.post("/login", function(req, res) {
   });
   req.login(user, function(err) {
     if (err) {
-      console.log(err);
+      console.log("error login [post]");
+      res.render("login", {message: err});
     } else {
+      console.log("geen error");
       passport.authenticate("local")(req, res, function() {
         res.redirect("/dashboard");
       });
@@ -165,7 +167,9 @@ app.get("/login", function(req, res) {
       profile: req
     });
   } else {
-    res.render("login");
+    res.render("login", {
+      message: ""
+    });
   }
 });
 app.get('/verifyEmailRegistration', function(req, res) {

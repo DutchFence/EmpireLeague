@@ -1,8 +1,5 @@
-<%- include("partials/home_header"); %>
-<h1>WELCOME U JUST GOT HACKED DUMBASS</h1>
-<h1>HALLO <%= profile.user.username%> </h1>
-<form class="" action="/logout" method="post">
-  <button type="submit" name="logout">RAUSLOGGEN SIE BITTE UND SCHNELL</button>
+<%- include("partials/profile_header",{profile_picture: profile_picture}); %>
+<section class="fs_section">
 
-</form>
-<%- include("partials/home_footer"); %>
+</section>
+<%- include("partials/profile_footer"); %>

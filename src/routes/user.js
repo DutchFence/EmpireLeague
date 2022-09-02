@@ -194,15 +194,11 @@ module.exports = function(app) {
           res.render("dashboard", {
             profile: req
           });
-
-
         } else {
           console.log("lol");
         }
-
       }
     });
-
   });
 
   app.get('/auth/facebook',

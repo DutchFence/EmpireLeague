@@ -31,7 +31,7 @@ mongoose.connect("mongodb://localhost:27017/userDB", {
 
 
 app.get("/", function(req, res) {
-  res.render("home");
+  res.render("dashboard",{profile_picture: "/img/theviper.jpg"});
 });
 
 app.listen(process.env.PORT, function() {

@@ -29,6 +29,11 @@ a {
 }
 
 /* Global classes */
+
+/* Dynamic */
+.error{
+  color: red;
+}
 /* labeltext */
 .form-text{
   color:#f5edd6;

@@ -1,6 +1,7 @@
 
 <%- include("partials/home_header"); %>
 
+
 <section class="fs_section container-fluid justify-content-center spacing_for_nav">
 <div class="container-fluid">
 <div class="row">
@@ -10,17 +11,17 @@
     <form class="" action="/register" method="post">
       <div >
         <label for="exampleInputEmail1" class="form-label">Email address
-        <input type="email" class="form-control" name="email" aria-describedby="emailHelp"></label>
+        <input type="email" class="form-control" name="email" value="<%= message.email%>" aria-describedby="emailHelp"></label>
       </div>
-      <div>
-        <label for="exampleInputEmail1" class="form-label">Username
-        <input type="text" class="form-control" name="username" aria-describedby="emailHelp"></label>
-
-      </div>
-      <div class="mb-3">
+      <div class="my-2">
         <label for="exampleInputEmail1" class="form-label">Password
         <input type="password" class="form-control" name="password" aria-describedby="emailHelp"></label>
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <div id="emailHelp" class="form-text"><%= message.content %></div>
+      </div>
+      <div class="">
+        <label for="exampleInputEmail1" class="form-label">Verify Password
+        <input type="text" class="form-control" name="verifyPassword" aria-describedby="emailHelp"></label>
+
       </div>
 
       <div class="mb-3 form-check">

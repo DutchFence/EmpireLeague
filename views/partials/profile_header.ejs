@@ -34,6 +34,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat:ital,wght@0,600;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Quattrocento+Sans:wght@700&display=swap" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" 
     <link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/global_elements.css">
@@ -44,17 +45,17 @@
 
   <nav class="navbar navbar-expand-lg  blue_background">
   <div class="container-fluid">
-    <a class="navbar-brand " href="/dashboard"><img class="flag_logo"src=<%- profile_picture%> /></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav ">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/forum">Forum</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Standings">Standings</a>
+          <a class="nav-link" href="/leaderboard">leaderboard</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/Upcoming matches">Matches</a>
@@ -85,3 +86,36 @@
   </div>
 </nav>
   <body>
+    <section >
+    <div class="container-fluid">
+      <div class="row">
+        <div  class=" quick_menu col-sm-2 _line _fit ">
+<div class="player_overview _line _fit">
+  <a href="/profile"><img src=<%- profile_picture%> alt=""></a>
+</div>
+
+    <ul class=" _fit " >
+
+      <li >
+        <a aria-current="page" href="/forum">Forum</a>
+      </li>
+      <li >
+        <a  href="/<Leaderboard></Leaderboard>">Leaderboard</a>
+      </li>
+      <li >
+        <a href="/Upcoming matches">Matches</a>
+      </li>
+      <li >
+        <a aria-current="page" href="/forum">Forum</a>
+      </li>
+      <li >
+        <a  href="/<Leaderboard></Leaderboard>">Leaderboard</a>
+      </li>
+      <li >
+        <a href="/Upcoming matches">Matches</a>
+      </li>
+
+
+    </ul>
+
+        </div>

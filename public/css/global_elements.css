@@ -7,7 +7,10 @@ footer, a {
   text-decoration: none;
   text-shadow: none;
 }
-
+img{
+  border:  1mm ridge;
+  border-color: #d7be69;
+}
 body {
   background-color: #000E57;
   opacity: 0.9;
@@ -24,7 +27,7 @@ h1 {
   text-decoration: overline;
 }
 
-a {
+.nav a {
   color: gold;
 }
 
@@ -72,7 +75,9 @@ a {
 .form-label{
   width:40%;
 }
-
+ul{
+      list-style-type: none;
+}
 input[type]:focus{
   border: 1mm ridge;
     border-color: #d7be69;
@@ -129,4 +134,62 @@ input[type]:focus{
   right: 0;
   opacity: 1;
   z-index: -1;
+}
+
+
+
+/* Flipcard */
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #b4b1b1;
+  opacity: 1;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #b4b1b1 4px ), repeating-linear-gradient( #cccccc55, #cccccc );
+  transform: rotateY(180deg);
+  border:  1mm ridge;
+  border-color: #d7be69;
+}
+
+.flip-card-back p{
+  color: black;
+  text-shadow: none;
+}
+
+.flip-card-back h2{
+  color: navy;
+text-shadow: none;
+text-decoration: none;
 }

@@ -1,5 +1,76 @@
-<%- include("partials/profile_header",{profile_picture: profile_picture}); %>
-<section class="fs_section">
+<%- include("partials/profile_header"); %>
 
-</section>
+<div class="col-sm-10  _line _fit nullP">
+
+<div class="row">
+  <div class="col-sm-6 py-4 justify-content-center d-flex">
+    <table class="caption-top">
+      <caption><a href="#">League 2</a></caption>
+      <thead>
+        <th>Game</th>
+        <th>Player 1</th>
+        <th>Player 2 </th>
+        <th>Winner </th>
+      </thead>
+      <tbody>
+      <tr>
+      <td>#1</td>
+        <td>  <a href="#">Mr. Yo</a></td>
+        <td><a href="#">Daut</a></td>
+        <td><a href="#">Daut</a></td>
+      </tr>
+        <tr>
+      <td>#2</td>
+        <td><a href="#">Andre_2T</a></td>
+        <td><a href="#">Survivalist</a></td>
+        <td><a href="#">Andre_2T</a></td>
+      </tr>
+        <tr>
+      <td>#3</td>
+        <td><a href="#">ACCM</a></td>
+        <td><a href="#">Hera</a></td>
+        <td><a href="#">Hera</a></td>
+      </tr>
+        <tr>
+      <td>#4</td>
+        <td><a href="#">Modri</a></td>
+        <td><a href="#">The Viper</a></td>
+        <td><a href="#">Modri</a></td>
+      </tr>
+        <tr>
+      <td>#5</td>
+        <td><a href="#">GhiGhi</a></td>
+        <td><a href="#">Liereyy</a></td>
+        <td><a href="#">GhiGhi</a></td>
+      </tr>
+        <tr>
+      <td>#6</td>
+        <td><a href="#">Villese</a></td>
+        <td><a href="#">Nicov</a></td>
+        <td><a href="#">Villese</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-sm-6  justify-content-center d-flex py-4">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src=<%- nextOpponent %> alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h2><%= name %></h2>
+        <p>Has played <%= playedGames %> games</p>
+        <p>Won <%= wonGames%> games</p>
+          <p>Lost <%= lostGames%> games</p>
+          <p>Win ratio: <%= (wonGames/playedGames)*100%>%</p>
+          <p>Ranking #<%= position %> on the leaderboard</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-12 py-4 justify-content-center d-flex">
+HALOOOOOOOOOOOOOOOOOOOOOOOOHALOOOOOOOOOOOOOOOOOOOOOOOOHALOOOOOOOOOOOOOOOOOOOOOOOOHALOOOOOOOOOOOOOOOOOOOOOOOO
+</div>
+
 <%- include("partials/profile_footer"); %>

@@ -1,0 +1,92 @@
+input{
+  margin-top: 0.4rem;
+}
+table a {
+  text-decoration: none;
+  color:inherit;
+}
+.quick_menu a{
+  color: black;
+}
+
+.player_overview img{
+
+  border-radius: 100%;
+  width: 80%;
+
+}
+
+.player_overview{
+  background: black;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+
+
+}
+.quick_menu{
+height: 90.9vh;
+background-color: #b4b1b1;
+opacity: 1;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #b4b1b1 4px ), repeating-linear-gradient( #cccccc55, #cccccc );
+color: black;
+border-right:  1mm ridge;
+}
+
+.quick_menu ul{
+padding-top: 1rem;
+}
+._line{
+  border-bottom:  0.8mm ridge;
+  border-color: #b59630;
+}
+
+._fit{
+    padding-left: 0;
+    padding-right:0;
+}
+
+
+table, th, td{
+  font-family: 'Cinzel', serif;
+  text-align:center;
+    border: 1px solid #ddd;
+  border-collapse: collapse;
+
+}
+table{
+  width: 90%;
+}
+
+tbody td:nth-child(1), tbody td:nth-child(2), tbody td:nth-child(3){
+  text-decoration:none;
+  color: black;
+}
+
+tr:hover, tr:nth-child(even):hover{
+  background-color:lightgreen;
+}
+
+tr:nth-child(even){
+  background-color: white;
+}
+caption{
+  text-align: center;
+
+}
+tbody:nth-child(odd){
+    background-color: #ededde;
+}
+thead, caption{
+  color: #d7be69;
+  background-color: #000E57;
+  background: linear-gradient(135deg, #0e103255 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(225deg, #0e1032 25%, transparent 25%) -5px 0/ 10px 10px, linear-gradient(315deg, #0e103255 25%, transparent 25%) 0 0/ 10px 10px, linear-gradient(to right, #0e1032 5%, #000E57 100%), linear-gradient(45deg, #0e1032 25%, #000E57 25%) 0 0/ 10px 10px;
+}
+
+thead th:nth-child(1){
+  width:10%;
+  text-align: none;
+}
+
+tbody td:nth-child(4){
+  color: green;
+}

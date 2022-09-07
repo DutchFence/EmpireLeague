@@ -31,7 +31,15 @@ mongoose.connect("mongodb://localhost:27017/userDB", {
 
 
 app.get("/", function(req, res) {
-  res.render("dashboard",{profile_picture: "/img/theviper.jpg"});
+  res.render("dashboard", {
+    profile_picture: "/img/theviper.jpg",
+    nextOpponent: "/img/Hera.jpg",
+    name:"Hera",
+    wonGames: "4",
+    playedGames:"8",
+    lostGames: "4",
+    position: "3"
+  });
 });
 
 app.listen(process.env.PORT, function() {

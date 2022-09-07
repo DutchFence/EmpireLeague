@@ -6,7 +6,8 @@ module.exports = function(app) {
       console.log("authenticated ");
       console.log(req);
       res.render("dashboard", {
-        profile: req
+        profile: req,
+        nextOpponent: "./public/img/Hera.jpg"
       });
     } else {
       res.redirect("/login");
